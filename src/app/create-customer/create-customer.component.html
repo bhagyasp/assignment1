@@ -1,0 +1,37 @@
+<h3>Add New Customer</h3>
+<form  #f="ngForm">
+  <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input ngModel name="inputName" #inputName="ngModel" type="text" class="form-control" id="inputName" aria-describedby="emailHelp" placeholder="Enter Name">
+      <!--div class="alert alert-danger" *ngIf="inputName.touched && !inputName.valid">Name is required</div> -->
+  </div>
+       <div class="form-group">
+        <label for="inputEmail">Email ID</label>
+        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+       <!-- <div class="alert alert-danger" *ngIf="inputEmail.touched && !inputEmail.valid">Email ID is required</div> -->
+        
+      </div>
+      <div class="form-group">
+        <label for="inputTelephone">Telephone</label>
+        <input ngModel name="inputTelephone" #inputTelephone="ngModel" name="inputEmail" #inputEmail="ngModel" type="tel" class="form-control" id="inputTelephone" placeholder="Telephone">
+        <!--<div class="alert alert-danger" *ngIf="inputTelephone.touched && !inputTelephone.valid">Telephone is required</div> -->
+      </div>
+      <div class="form-group">
+          <label for="inputCdate">Created Date</label>
+          <input ngModel name="inputCdate" #inputCdate="ngModel" type="date" class="form-control" id="inputCdate" placeholder="Select Date">
+          <!--<div class="alert alert-danger" *ngIf="inputCdate.touched && !inputCdate.valid">Date is required</div> -->
+        </div>
+      <div class="modal-footer">
+      <button type="submit" class="btn btn-primary" mat-dialog-close="yes">Submit</button>
+      
+      <button type="button" class="btn btn-secondary" mat-dialog-close="no">Close</button>
+    </div>  
+    </form>
+
+      <!--
+required ngModel name="inputCdate" #inputCdate="ngModel" (change)="log(inputCdate)"
+required ngModel name="inputTelephone" #inputTelephone="ngModel" (change)="log(inputTelephone)"
+ngModel name="inputEmail" #inputEmail="ngModel" (change)="log(inputEmail)"
+required ngModel name="inputName" #inputName="ngModel" (change)="log(inputName)"
+
+      -->
